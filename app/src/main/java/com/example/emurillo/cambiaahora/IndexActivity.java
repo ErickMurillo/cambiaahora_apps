@@ -18,21 +18,21 @@ public class IndexActivity extends AppCompatActivity {
 
          Button button = (Button)findViewById(R.id.test);
          button.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(IndexActivity.this, TestActivity.class);
+                 startActivity(intent);
+             }
+         });
+
+        Button buttonDirectorio = (Button)findViewById(R.id.directorio);
+        buttonDirectorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IndexActivity.this, TestActivity.class);
+                Intent intent = new Intent(IndexActivity.this, DirectorioActivity.class);
                 startActivity(intent);
             }
         });
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
     }
 
 

@@ -4,4 +4,5 @@
     <string name="item2">Inicio</string>
     <string name="title_activity_index">Cambia Ahora Apps</string>
     <string name="title_activity_main">Violencia</string>
+    <string name="title_activity_directorio">DirectorioActivity</string>
 </resources>
