@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test de Violencia</title>
+	<link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="../../css/style.css" media="screen,projection"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h3>Tu novio…</h3>
+			</div>
+			<div class="col s12">
+				<p class="flow-text">1. ¿Critica tu forma de vestir, de arreglarte y trata de convencerte para que cambies tu aspecto?</p>
+				<div class="input-field col s12">
+					<select class="icons preg1">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s12">
+				<p class="flow-text">2. ¿Te impide ir donde quieras, cuando quieras y con quién quieras?</p>
+				<div class="input-field col s12">
+					<select class="icons preg2">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s12">
+				<p class="flow-text">3. ¿Intenta que te alejes de tu familia o de tus amistades o las critica o descalifica?</p>
+				<div class="input-field col s12">
+					<select class="icons preg3">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s12">
+				<p class="flow-text">4. ¿Te hace sentir inferior, tonta o inútil o se burla de tus acciones?</p>
+				<div class="input-field col s12">
+					<select class="icons preg4">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s12">
+				<p class="flow-text">5. ¿Te insulta o se dirige a ti con nombre ofensivo?</p>
+				<div class="input-field col s12">
+					<select class="icons preg5">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s12">
+				<p class="flow-text">6. ¿Se pone celoso y te acusa de mantener relaciones con otras personas?</p>
+				<div class="input-field col s12">
+					<select class="icons preg6">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s12">
+				<p class="flow-text">7. ¿Te exige la contraseña de tu Facebook, revisa tu celular y no quiere que tengas amigos?</p>
+				<div class="input-field col s12">
+					<select class="icons preg7">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s12">
+				<p class="flow-text">8. ¿Te llama o manda mensajes constantemente para saber dónde y con quién estás?</p>
+				<div class="input-field col s12">
+					<select class="icons preg8">
+						<option value="" disabled selected>Seleccionar opción</option>
+						<option value="1" class="left circle">Nunca</option>
+						<option value="2" class="left circle">A veces</option>
+						<option value="3" class="left circle">Siempre</option>
+					</select>
+				</div>
+			</div>
+			<div class="col s12">
+				<button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Continuar</button>
+			</div>
+		</div>	
+	</div>
+
+	<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../../js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('select').material_select();
+			$(".button-collapse").sideNav();
+
+			$( "#submit" ).on( "click", function() {
+				var x1 = $(".preg1 option:selected").val();
+				var x2 = $(".preg2 option:selected").val();
+				var x3 = $(".preg3 option:selected").val();
+				var x4 = $(".preg4 option:selected").val();
+				var x5 = $(".preg5 option:selected").val();
+				var x6 = $(".preg6 option:selected").val();
+				var x7 = $(".preg7 option:selected").val();
+				var x8 = $(".preg8 option:selected").val();
+
+				suma = parseInt(x1) + parseInt(x2) + parseInt(x3) + parseInt(x4) + parseInt(x5) + 
+				parseInt(x6) + parseInt(x7) + parseInt(x8);
+
+				if (suma <= 8 ) {
+					alert('verde');
+	    			//window.location.href = "../index.html";
+	    		}else if(suma > 8 && suma <= 16){
+	    			alert('amarillo');
+	    			//window.location.href = "../index.html";
+	    		}else if(suma > 16){
+	    			alert('rojo');
+	    			//window.location.href = "../index.html";
+	    		};
+
+	    	});
+		});
+	</script>
+</body>
+</html>
