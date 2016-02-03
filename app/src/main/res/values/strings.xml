@@ -5,4 +5,8 @@
     <string name="title_activity_index">Cambia Ahora Apps</string>
     <string name="title_activity_main">Violencia</string>
     <string name="title_activity_directorio">Directorio de ayuda</string>
+    <string name="title_activity_test_cigarros">TestCigarrosActivity</string>
+    <string name="title_activity_test_alcohol">TestAlcoholActivity</string>
+    <string name="title_activity_test_marihuana">TestMarihuanaActivity</string>
+    <string name="title_activity_test_droga">TestDrogaActivity</string>
 </resources>

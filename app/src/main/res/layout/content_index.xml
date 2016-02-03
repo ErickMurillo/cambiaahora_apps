@@ -39,7 +39,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test de violencia"
+        android:text="Test de adicciones"
         android:id="@+id/test"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
