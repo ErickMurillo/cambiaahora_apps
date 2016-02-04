@@ -15,6 +15,9 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+
+import java.util.Random;
 
 public class TestActivity extends AppCompatActivity {
 
@@ -25,59 +28,55 @@ public class TestActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        Button button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Random rnd = new Random();
+                int x=rnd.nextInt(5)+1;
+                switch(x){
+                    case 1:
+                        Intent intent1 = new Intent(TestActivity.this, TestCigarrosActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case 2:
+                        Intent intent2 = new Intent(TestActivity.this, TestAlcoholActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case 3:
+                        Intent intent3 = new Intent(TestActivity.this, TestMarihuanaActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4 = new Intent(TestActivity.this, TestDrogaActivity.class);
+                        startActivity(intent4);
+                        break;
+                    case 5:
+                        Intent intent5 = new Intent(TestActivity.this, TestActivity.class);
+                        startActivity(intent5);
+                        break;
+                }
 
-        WebView webview = (WebView) findViewById(R.id.webView1);
-        webview.getSettings().setJavaScriptEnabled(true);
-        webview.setWebChromeClient(new WebChromeClient());
-        webview.setWebViewClient(new WebViewClient());
-        webview.loadUrl("file:///android_asset/www/test_violencia/index.html");
+            }
+        });
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // Check if the key event was the Back button and if there's history
-        WebView webview = (WebView) findViewById(R.id.webView1);
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && webview.canGoBack()) {
-            webview.goBack();
-            return true;
-        }
-        // If it wasn't the Back key or there's no web page history, bubble up to the default
-        // system behavior (probably exit the activity)
-        return super.onKeyDown(keyCode, event);
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent intent = new Intent(TestActivity.this, IndexActivity.class);
             startActivity(intent);
         } else if(id == R.id.index_test) {
-            WebView webview = (WebView) findViewById(R.id.webView1);
-            webview.getSettings().setJavaScriptEnabled(true);
-            webview.setWebChromeClient(new WebChromeClient());
-            webview.setWebViewClient(new WebViewClient());
-            webview.loadUrl("file:///android_asset/www/test_violencia/index.html");
+            Intent intent1 = new Intent(TestActivity.this, TestActivity.class);
+            startActivity(intent1);
         }
 
         return super.onOptionsItemSelected(item);

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test de Cigarros</title>
+	<link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="../../css/style.css" media="screen,projection"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<p class="flow-text">Te ayudaremos a saber si tenés alguna adicción al cigarrillo o tabaco. Esperamos que no la tengas pero si da positivo animate a buscar ayuda. Cambia ahora</p>
+		</div>
+
+		<div class="col s12">
+			<p class="flow-text">1. A lo largo de tu vida, ¿ha consumido cigarro aunque sea alguna vez?</p>
+			<div class="input-field col s12">
+				<select class="icons preg1">
+					<option value="" disabled selected>Seleccionar opción</option>
+					<option value="3" class="left circle">Sí</option>
+					<option value="0" class="left circle">No</option>
+				</select>
+			</div>
+		</div>
+		<div class="col s12">
+			<p class="flow-text">2. En los últimos tres meses, ¿con qué frecuencia ha consumido cigarrillos?</p>
+			<div class="input-field col s12">
+				<select class="icons preg2">
+					<option value="" disabled selected>Seleccionar opción</option>
+					<option value="0" class="left circle">Nunca</option>
+					<option value="2" class="left circle">Una o dos veces</option>
+					<option value="3" class="left circle">Cada mes</option>
+					<option value="4" class="left circle">Cada semana</option>
+					<option value="6" class="left circle">A diario o casi diario</option>
+				</select>
+			</div>
+		</div>
+		<div class="col s12">
+			<p class="flow-text">3. En los últimos tres meses, ¿con que frecuencia ha deseado consumir cigarros?</p>
+			<div class="input-field col s12">
+				<select class="icons preg3">
+					<option value="" disabled selected>Seleccionar opción</option>
+					<option value="0" class="left circle">Nunca</option>
+					<option value="3" class="left circle">Una o dos veces</option>
+					<option value="4" class="left circle">Cada mes</option>
+					<option value="5" class="left circle">Cada semana</option>
+					<option value="6" class="left circle">A diario o casi diario</option>
+				</select>
+			</div>
+		</div>
+		<div class="col s12">
+			<p class="flow-text">4. En los últimos tres meses ¿con qué frecuencia el consumo  de cigarros le ha causado problemas de salud, social, legal o económico?</p>
+			<div class="input-field col s12">
+				<select class="icons preg4">
+					<option value="" disabled selected>Seleccionar opción</option>
+					<option value="0" class="left circle">Nunca</option>
+					<option value="4" class="left circle">Una o dos veces</option>
+					<option value="5" class="left circle">Cada mes</option>
+					<option value="6" class="left circle">Cada semana</option>
+					<option value="7" class="left circle">A diario o casi diario</option>
+				</select>
+			</div>
+		</div>
+		<div class="col s12">
+			<p class="flow-text">5. En los últimos tres meses, ¿con qué frecuencia ha dejado de hacer lo que esperabas  por consumir cigarro?</p>
+			<div class="input-field col s12">
+				<select class="icons preg5">
+					<option value="" disabled selected>Seleccionar opción</option>
+					<option value="0" class="left circle">Nunca</option>
+					<option value="5" class="left circle">Una o dos veces</option>
+					<option value="6" class="left circle">Cada mes</option>
+					<option value="7" class="left circle">Cada semana</option>
+					<option value="8" class="left circle">A diario o casi diario</option>
+				</select>
+			</div>
+		</div>
+		<div class="col s12">
+			<p class="flow-text">6. ¿Un amigo, un familiar o alguien más ha mostrado preocupación  por tu  consumo de cigarros?</p>
+			<div class="input-field col s12">
+				<select class="icons preg6">
+					<option value="" disabled selected>Seleccionar opción</option>
+					<option value="0" class="left circle">No, nunca</option>
+					<option value="6" class="left circle">Sí</option>
+					<option value="3" class="left circle">Sí, pero no en los últimos 3 meses</option>
+				</select>
+			</div>
+		</div>
+		<div class="col s12">
+			<p class="flow-text">7. ¿Ha intentado alguna vez controlar, reducir o  dejar  de consumir cigarros y no lo ha logrado?</p>
+			<div class="input-field col s12">
+				<select class="icons preg6">
+					<option value="" disabled selected>Seleccionar opción</option>
+					<option value="0" class="left circle">No, nunca</option>
+					<option value="6" class="left circle">Sí</option>
+					<option value="3" class="left circle">Sí, pero no en los últimos 3 meses</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/materialize.min.js"></script>
+<script>
+	$(".button-collapse").sideNav();
+	$('select').material_select();
+</script>
+</body>
+</html>

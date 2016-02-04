@@ -8,9 +8,35 @@
     tools:context=".TestActivity"
     tools:showIn="@layout/activity_main">
 
-    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/webView1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:text="Es tiempo de saber si tenés o no alguna adicción al cigarro, alcohol, marihuana, cocaína o tranquilizantes. Responderás una serie de 8 preguntas que te ayudarán a conocerte y ayudarte. "
+        android:layout_marginTop="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Podés hacer hasta 5 veces este test, porque cada vez encontrarás preguntas diferentes. También pudieras hacérselo a familiares y amistades. "
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="62dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar test"
+        android:id="@+id/button"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+
 </RelativeLayout>
