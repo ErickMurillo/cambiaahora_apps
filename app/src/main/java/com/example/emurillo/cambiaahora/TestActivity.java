@@ -32,30 +32,32 @@ public class TestActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Random rnd = new Random();
-                int x=rnd.nextInt(5)+1;
-                switch(x){
-                    case 1:
-                        Intent intent1 = new Intent(TestActivity.this, TestCigarrosActivity.class);
-                        startActivity(intent1);
-                        break;
-                    case 2:
-                        Intent intent2 = new Intent(TestActivity.this, TestAlcoholActivity.class);
-                        startActivity(intent2);
-                        break;
-                    case 3:
-                        Intent intent3 = new Intent(TestActivity.this, TestMarihuanaActivity.class);
-                        startActivity(intent3);
-                        break;
-                    case 4:
-                        Intent intent4 = new Intent(TestActivity.this, TestDrogaActivity.class);
-                        startActivity(intent4);
-                        break;
-                    case 5:
-                        Intent intent5 = new Intent(TestActivity.this, TestActivity.class);
-                        startActivity(intent5);
-                        break;
-                }
+                Intent intent1 = new Intent(TestActivity.this, TestCigarrosActivity.class);
+                startActivity(intent1);
+//                Random rnd = new Random();
+//                int x=rnd.nextInt(5)+1;
+//                switch(x){
+//                    case 1:
+//                        Intent intent1 = new Intent(TestActivity.this, TestCigarrosActivity.class);
+//                        startActivity(intent1);
+//                        break;
+//                    case 2:
+//                        Intent intent2 = new Intent(TestActivity.this, TestAlcoholActivity.class);
+//                        startActivity(intent2);
+//                        break;
+//                    case 3:
+//                        Intent intent3 = new Intent(TestActivity.this, TestMarihuanaActivity.class);
+//                        startActivity(intent3);
+//                        break;
+//                    case 4:
+//                        Intent intent4 = new Intent(TestActivity.this, TestDrogaActivity.class);
+//                        startActivity(intent4);
+//                        break;
+//                    case 5:
+//                        Intent intent5 = new Intent(TestActivity.this, TestActivity.class);
+//                        startActivity(intent5);
+//                        break;
+//                }
 
             }
         });

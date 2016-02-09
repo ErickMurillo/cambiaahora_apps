@@ -29,6 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TestCigarrosActivity"
+            android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_test_cigarros"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

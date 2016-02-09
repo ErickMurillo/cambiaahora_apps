@@ -1,6 +1,9 @@
 package com.example.emurillo.cambiaahora;
 
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,9 +13,13 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class TestCigarrosActivity extends AppCompatActivity {
 
@@ -28,7 +35,12 @@ public class TestCigarrosActivity extends AppCompatActivity {
         webview.setWebChromeClient(new WebChromeClient());
         webview.setWebViewClient(new WebViewClient());
         webview.loadUrl("file:///android_asset/www/test_adicciones/cigarros/index.html");
+
+        WebSettings settings = webview.getSettings();
+        settings.setDomStorageEnabled(true);
+        settings.setDatabaseEnabled(true);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
