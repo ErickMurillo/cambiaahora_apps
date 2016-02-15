@@ -3,12 +3,14 @@ package com.example.emurillo.cambiaahora;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +22,8 @@ import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+
+import junit.framework.Test;
 
 public class TestCigarrosActivity extends AppCompatActivity {
 
@@ -33,14 +37,30 @@ public class TestCigarrosActivity extends AppCompatActivity {
         WebView webview = (WebView) findViewById(R.id.webView1);
         webview.getSettings().setJavaScriptEnabled(true);
         webview.setWebChromeClient(new WebChromeClient());
-        webview.setWebViewClient(new WebViewClient());
+        webview.setWebViewClient(new MyWebClientClass());
         webview.loadUrl("file:///android_asset/www/test_adicciones/cigarros/index.html");
 
         WebSettings settings = webview.getSettings();
         settings.setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
+
     }
 
+    private class  MyWebClientClass extends WebViewClient{
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url){
+            WebView webview = (WebView) findViewById(R.id.webView1);
+            String webUrl = webview.getUrl();
+            if (webUrl.equals("file:///android_asset/www/test_adicciones/cigarros/resultado.html")){
+                Intent intent = new Intent(TestCigarrosActivity.this, TestActivity.class);
+                startActivity(intent);
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,13 +85,9 @@ public class TestCigarrosActivity extends AppCompatActivity {
             Intent intent = new Intent(TestCigarrosActivity.this, IndexActivity.class);
             startActivity(intent);
         } else if(id == R.id.index_test) {
-            WebView webview = (WebView) findViewById(R.id.webView1);
-            webview.getSettings().setJavaScriptEnabled(true);
-            webview.setWebChromeClient(new WebChromeClient());
-            webview.setWebViewClient(new WebViewClient());
-            webview.loadUrl("file:///android_asset/www/test_adicciones/cigarros/index.html");
+            Intent intent1 = new Intent(TestCigarrosActivity.this, TestActivity.class);
+            startActivity(intent1);
         }
-
         return super.onOptionsItemSelected(item);
     }
 
